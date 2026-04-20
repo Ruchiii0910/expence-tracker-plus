@@ -1,0 +1,48 @@
+<!-- create a simple expense tracker UI with input for amount, category, add button and list display -->
+<!DOCTYPE html>
+<html lang="en">        
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <form id="expense-form" class="expense-form">
+            <input type="number" id="amount" placeholder="Amount" required>
+            <select id="category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="date" id="date" required>
+            <button type="submit" id="addExpense">Add Expense</button>
+        </form>
+        <div class="lists">
+            <div class="expense-section">
+                <h2>All Expenses</h2>
+                <ul class="expense-list" id="expense-list"></ul>
+            </div>
+            <div class="total-section">
+                <h2>Total Expenses by Category</h2>
+                <ul id="total-expense-list"></ul>
+            </div>
+        </div>
+        <div class="filter-section">
+            <label for="date-filter">Filter by Date:</label>
+            <input type="date" id="date-filter">
+            <ul id="filtered-expense-list"></ul>
+        </div>
+        <div class="limit-section">
+            <label for="expense-limit">Set Expense Limit:</label>
+            <input type="number" id="expense-limit" placeholder="Limit">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
